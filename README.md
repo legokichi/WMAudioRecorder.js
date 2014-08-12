@@ -58,6 +58,7 @@ document.body.addEventListener("click", function(){
 </script>
 ```
 
+### Worker
 
 ```js
 importScripts("lib/WMAudioRecorder.js");
