@@ -1,4 +1,4 @@
-# WMRecord.js [![Build Status](https://travis-ci.org/legokichi/WMAudioRecorder.js.png)](http://travis-ci.org/legokichi/WMAudioRecorder.js)
+# WMAudioRecorder.js [![Build Status](https://travis-ci.org/legokichi/WMAudioRecorder.js.png)](http://travis-ci.org/legokichi/WMAudioRecorder.js)
 
 [![npm](https://nodei.co/npm/legokichi.wmrecord.js.png?downloads=true&stars=true)](https://nodei.co/npm/legokichi.wmrecord.js/)
 
