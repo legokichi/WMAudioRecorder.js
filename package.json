@@ -1,12 +1,12 @@
 {
-  "name":           "legokichi.wmrecord.js",
+  "name":           "legokichi.wmaudiorecorder.js",
   "version":        "0.0.0",
-  "description":    "Module template for Mobile Web Application.",
-  "url":            "https://github.com/legokichi/WMRecord.js",
+  "description":    "Audio Recorder using MediaStream APIde",
+  "url":            "https://github.com/legokichi/WMAudioRecorder.js",
   "keywords":       ["WebModule", "Unstable"],
   "repository": {
     "type":         "git",
-    "url":          "https://github.com/legokichi/WMRecord.js.git"
+    "url":          "https://github.com/legokichi/WMAudioRecorder.js.git"
   },
   "scripts": {
     "watch":        "node node_modules/uupaa.watch.js --verbose --action build",
@@ -26,8 +26,8 @@
     "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
   "x-build": {
-    "source":       ["lib/WMRecord.js", "lib/RecordBuffer.js", "lib/Wave.js"],
-    "output":       "release/WMRecord.min.js",
+    "source":       ["lib/WMAudioRecorder.js", "lib/RecordBuffer.js", "lib/Wave.js"],
+    "output":       "release/WMAudioRecorder.min.js",
     "target":       ["Browser"],
     "label":        ["@dev"],
     "module": {

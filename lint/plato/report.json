@@ -2,13 +2,13 @@
   "reports": [
     {
       "info": {
-        "file": "lib/WMRecord.js",
-        "fileShort": "WMRecord.js",
-        "fileSafe": "WMRecord_js",
-        "link": "files/WMRecord_js/index.html"
+        "file": "lib/WMAudioRecorder.js",
+        "fileShort": "WMAudioRecorder.js",
+        "fileSafe": "WMAudioRecorder_js",
+        "link": "files/WMAudioRecorder_js/index.html"
       },
       "jshint": {
-        "messages": 0
+        "messages": 1
       },
       "complexity": {
         "aggregate": {
@@ -28,25 +28,25 @@
                 ]
               },
               "operands": {
-                "distinct": 14,
+                "distinct": 15,
                 "total": 22,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
               "length": 38,
-              "vocabulary": 22,
-              "difficulty": 6.285714285714286,
-              "volume": 169.4584015082173,
-              "effort": 1065.1670951945086,
-              "bugs": 0.05648613383607243,
-              "time": 59.17594973302826
+              "vocabulary": 23,
+              "difficulty": 5.866666666666666,
+              "volume": 171.8953543301665,
+              "effort": 1008.4527454036433,
+              "bugs": 0.05729845144338883,
+              "time": 56.025152522424634
             },
             "params": 1
           }
         },
-        "module": "WMRecord.js",
-        "maintainability": 78.18967932389243
+        "module": "WMAudioRecorder.js",
+        "maintainability": 78.33703951502797
       }
     },
     {
@@ -151,11 +151,11 @@
   "summary": {
     "total": {
       "sloc": 246,
-      "maintainability": 205.9759087699773
+      "maintainability": 206.12326896111284
     },
     "average": {
       "sloc": 82,
-      "maintainability": "68.66"
+      "maintainability": "68.71"
     }
   }
 }

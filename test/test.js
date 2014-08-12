@@ -6,7 +6,10 @@ var _runOnBrowser = "document" in global;
 
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
-return new Test("WMRecord", {
+var Wave = WMAudioRecorder.Wave;
+var RecordBuffer = WMAudioRecorder.RecordBuffer;
+
+return new Test("WMAudioRecorder", {
         disable:    false,
         browser:    true,
         worker:     false,
@@ -14,16 +17,16 @@ return new Test("WMRecord", {
         button:     true,
         both:       true, // test the primary module and secondary module
     }).add([
-        test_WMRecord_recording,
+        test_WMAudioRecorder_recording,
     ]).run().clone();
 
-function test_WMRecord_recording(test, pass, miss) {
+function test_WMAudioRecorder_recording(test, pass, miss) {
     navigator.getUserMedia({video: false, audio: true}, function(mediaStream){
         var actx = new AudioContext();
 
         var recording = true;
         var processor = actx.createScriptProcessor(16384, 2, 2);
-        var recbuf = new WMRecord.RecordBuffer(processor.numberOfInputs);
+        var recbuf = new RecordBuffer(processor.numberOfInputs);
         var source = actx.createMediaStreamSource(mediaStream);
         source.connect(processor);
         processor.connect(actx.destination);
@@ -41,7 +44,7 @@ function test_WMRecord_recording(test, pass, miss) {
         window.alert("recording 3 sec. please make some noize.");
         setTimeout(function(){
             recording = false;
-            var audio = new WMRecord.Wave(processor.numberOfInputs, actx.sampleRate, recbuf.toPCM()).toAudio();
+            var audio = new Wave(processor.numberOfInputs, actx.sampleRate, recbuf.toPCM()).toAudio();
             audio.autoplay = true;
             document.body.appendChild(audio);
             window.alert("please listen.");

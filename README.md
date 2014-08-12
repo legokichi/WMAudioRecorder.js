@@ -1,4 +1,4 @@
-# WMRecord.js [![Build Status](https://travis-ci.org/legokichi/WMRecord.js.png)](http://travis-ci.org/legokichi/WMRecord.js)
+# WMRecord.js [![Build Status](https://travis-ci.org/legokichi/WMAudioRecorder.js.png)](http://travis-ci.org/legokichi/WMAudioRecorder.js)
 
 [![npm](https://nodei.co/npm/legokichi.wmrecord.js.png?downloads=true&stars=true)](https://nodei.co/npm/legokichi.wmrecord.js/)
 
@@ -6,7 +6,7 @@ Audio Recorder using MediaStream API.
 
 ## Document
 
-- [WMRecord.js wiki](https://github.com/legokichi/WMRecord.js/wiki/WMRecord)
+- [WMRecord.js wiki](https://github.com/legokichi/WMAudioRecorder.js/wiki/WMAudioRecorder)
 - [Development](https://github.com/uupaa/WebModule/wiki/Development)
 - [WebModule](https://github.com/uupaa/WebModule) ([Slide](http://uupaa.github.io/Slide/slide/WebModule/index.html))
 
@@ -16,13 +16,13 @@ Audio Recorder using MediaStream API.
 ### Browser
 
 ```js
-<script src="lib/WMRecord.js"></script>
+<script src="lib/WMAudioRecorder.js"></script>
 <script>
 var actx = new AudioContext();
 
 var recording = false;
 var processor = actx.createScriptProcessor(16384, 2, 2);
-var recbuf = new WMRecord.RecordBuffer(processor.numberOfInputs);
+var recbuf = new WMAudioRecorder.RecordBuffer(processor.numberOfInputs);
 
 processor.onaudioprocess = function(ev){
     if(recording){
@@ -43,9 +43,9 @@ navigator.getUserMedia({video: false, audio: true}, function(mediaStream){
 document.body.addEventListener("click", function(){
     recording = !recording;
     if(!recording){
-        var audio = new WMRecord.Wave(2, actx.sampleRate, recbuf.toPCM()).toAudio()
+        var audio = new WMAudioRecorder.Wave(2, actx.sampleRate, recbuf.toPCM()).toAudio()
         document.body.appendChild(audio);
-        recbuf = new WMRecord.RecordBuffer(processor.numberOfInputs);
+        recbuf = new WMAudioRecorder.RecordBuffer(processor.numberOfInputs);
     }
 });
 
