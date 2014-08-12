@@ -6,7 +6,7 @@ Audio Recorder using MediaStream API.
 
 ## Document
 
-- [WMRecord.js wiki](https://github.com/legokichi/WMAudioRecorder.js/wiki/WMAudioRecorder)
+- [WMAudioRecorder.js wiki](https://github.com/legokichi/WMAudioRecorder.js/wiki/WMAudioRecorder)
 - [Development](https://github.com/uupaa/WebModule/wiki/Development)
 - [WebModule](https://github.com/uupaa/WebModule) ([Slide](http://uupaa.github.io/Slide/slide/WebModule/index.html))
 
