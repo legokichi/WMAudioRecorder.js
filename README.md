@@ -1,6 +1,6 @@
 # WMAudioRecorder.js [![Build Status](https://travis-ci.org/legokichi/WMAudioRecorder.js.png)](http://travis-ci.org/legokichi/WMAudioRecorder.js)
 
-[![npm](https://nodei.co/npm/legokichi.wmrecord.js.png?downloads=true&stars=true)](https://nodei.co/npm/legokichi.wmrecord.js/)
+[![npm](https://nodei.co/npm/legokichi.wmaudiorecorder.js.png?downloads=true&stars=true)](https://nodei.co/npm/legokichi.wmaudiorecorder.js/)
 
 Audio Recorder using MediaStream API.
 

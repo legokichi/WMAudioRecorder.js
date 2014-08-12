@@ -1,6 +1,6 @@
 {
   "name":           "legokichi.wmaudiorecorder.js",
-  "version":        "0.0.1",
+  "version":        "0.0.2",
   "description":    "Audio Recorder using MediaStream APIde",
   "url":            "https://github.com/legokichi/WMAudioRecorder.js",
   "keywords":       ["WebModule", "Unstable"],
