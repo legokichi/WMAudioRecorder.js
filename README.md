@@ -2,7 +2,7 @@
 
 [![npm](https://nodei.co/npm/legokichi.wmaudiorecorder.js.png?downloads=true&stars=true)](https://nodei.co/npm/legokichi.wmaudiorecorder.js/)
 
-Audio Recorder using MediaStream API.
+Audio Recorder for Wave file using MediaStream API.
 
 ## Document
 
@@ -43,11 +43,33 @@ navigator.getUserMedia({video: false, audio: true}, function(mediaStream){
 document.body.addEventListener("click", function(){
     recording = !recording;
     if(!recording){
-        var audio = new WMAudioRecorder.Wave(2, actx.sampleRate, recbuf.toPCM()).toAudio()
+        wav = new WMAudioRecorder.Wave(processor.numberOfInputs, actx.sampleRate, recbuf.toPCM());
+        var blob = new Blob([wav.buffer], {"type": "audio/wav"});
+        var url =  URL.createObjectURL(blob);
+        var audio = document.createElement("audio");
+        audio.src = url;
+        audio.controls = true;
+        audio.autoplay = true;
         document.body.appendChild(audio);
         recbuf = new WMAudioRecorder.RecordBuffer(processor.numberOfInputs);
     }
 });
 
 </script>
+```
+
+
+```js
+importScripts("lib/WMAudioRecorder.js");
+
+var recbuf = new WMAudioRecorder.RecordBuffer(1);
+
+self.onmessage = function(ev.data){
+    if(ev.data.id === "buffer"){
+        recbuf.add(ev.data.buffer);
+    }else if(ev.data.id === "getWave"){
+        var wav = new WMAudioRecorder.Wave(1, ev.data.sampleRate, recbuf.toPCM());
+        self.postMessage({"buffer": wav.buffer}, [wav.buffer]);
+    }
+}
 ```
