@@ -2,7 +2,7 @@
 
 [![npm](https://nodei.co/npm/legokichi.wmrecord.js.png?downloads=true&stars=true)](https://nodei.co/npm/legokichi.wmrecord.js/)
 
-WMRecord.js description.
+Audio Recorder using MediaStream API.
 
 ## Document
 
